@@ -1,0 +1,131 @@
+<div class="tableHeader">
+  <span>Name</span>
+  <span>Exchange</span>
+  <span>Ticker</span>
+  <span>ISIN</span>
+  <span>Website</span>
+  <span>Actions</span>
+</div>
+<div
+  *ngIf="showUpdateNotification"
+  class="saveNotification"
+>
+  {{ updateNotification }}
+</div>
+<form
+  *ngFor="let result of searchResults;
+   let i = index"
+  [formGroup]="result.form"
+>
+  <table class="searchContainer">
+    <tbody class="results">
+    <tr>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editName">
+          {{ result.name }}
+        </ng-container>
+        <ng-template #editName>
+          <input
+            id="name-{{i}}"
+            formControlName="name"
+            aria-required="true"
+            placeholder="{{ result.name }}"
+          />
+          <div class="errorMessage">
+            {{ getErrorMessage(result.form.get('name'), 'Company Name') }}
+          </div>
+        </ng-template>
+      </td>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editExchange">
+          {{ result.exchange }}
+        </ng-container>
+        <ng-template #editExchange>
+          <input
+            id="exchange-{{i}}"
+            formControlName="exchange"
+            aria-required="true"
+            placeholder="{{ result.exchange }}"
+          />
+          <div class="errorMessage">
+            {{ getErrorMessage(result.form.get('exchange'), 'Exchange') }}
+          </div>
+        </ng-template>
+      </td>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editTicker">
+          {{ result.ticker }}
+        </ng-container>
+        <ng-template #editTicker>
+          <input
+            id="ticker-{{i}}"
+            formControlName="ticker"
+            aria-required="true"
+            placeholder="{{ result.ticker }}"
+          />
+          <div class="errorMessage">
+            {{ getErrorMessage(result.form.get('ticker'), 'Ticker') }}
+          </div>
+        </ng-template>
+      </td>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editISIN">
+          {{ result.isin }}
+        </ng-container>
+        <ng-template #editISIN>
+          <input
+            id="ISIN-{{i}}"
+            formControlName="ISIN"
+            aria-required="true"
+            placeholder="{{ result.isin }}"
+          />
+          <div class="errorMessage">
+            {{ getErrorMessage(result.form.get('ISIN'), 'ISIN') }}
+          </div>
+        </ng-template>
+      </td>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editWebsite">
+          <a href="{{ result.website }}" *ngIf="!!result.website">
+            <i class="icon-link"></i> Link
+          </a>
+        </ng-container>
+        <ng-template #editWebsite>
+          <input
+            id="website-{{i}}"
+            formControlName="website"
+            placeholder="{{ result.website }}"
+          />
+          <div class="errorMessage">
+            {{ getErrorMessage(result.form.get('website'), 'Website URL') }}
+          </div>
+        </ng-template>
+      </td>
+      <td>
+        <ng-container *ngIf="!result.isEditing; else editing">
+          <button (click)="editRow(result)">
+            <i class="icon-edit"></i>
+          </button>
+        </ng-container>
+        <ng-template #editing>
+          <button
+            (click)="saveRow(result)"
+            type="submit"
+            aria-label="Save Changes"
+            [disabled]="result.form.invalid"
+          >
+            <i
+              class="icon-save"
+              [ngClass]="result.form.invalid ? 'disableSVG' : '' "
+            ></i>
+          </button>
+
+          <button (click)="cancelEdit(result)">
+            <i class="icon-clear"></i>
+          </button>
+        </ng-template>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</form>

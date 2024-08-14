@@ -1,0 +1,41 @@
+@mixin icon($url, $width: 20px, $height: 20px) {
+  width: $width;
+  height: $height;
+  mask: url($url);
+  display: inline-block;
+  mask-size: cover;
+}
+
+// Icons
+
+.icon-user {
+  @include icon('../../../assets/icons/user.svg');
+}
+
+.icon-search {
+  @include icon('../../../assets/icons/search.svg');
+}
+
+.icon-edit {
+  @include icon('../../../assets/icons/edit.svg');
+}
+
+.icon-file {
+  @include icon('../../../assets/icons/file.svg');
+}
+
+.icon-plus {
+  @include icon('../../../assets/icons/plus.svg');
+}
+
+.icon-save {
+  @include icon('../../../assets/icons/save.svg');
+}
+
+.icon-link {
+  @include icon('../../../assets/icons/link.svg');
+}
+
+.icon-clear {
+  @include icon('../../../assets/icons/clear.svg');
+}

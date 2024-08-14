@@ -1,0 +1,111 @@
+@use '../../UI/styles/variables' as variables;
+@use '../../UI/styles/icons';
+
+
+.tableHeader {
+  @include variables.flexAlignCenterBetween;
+  padding-bottom: 5px;
+  width: 90%;
+  margin: 30px auto 0 auto;
+  box-sizing: border-box;
+  font-weight: bold;
+  border-bottom: variables.$midBorder;
+  font-size: variables.$fontSizePrimary;
+
+  span {
+    width: 20%;
+
+
+  }
+}
+
+.saveNotification {
+  @include variables.flexAlignCenterBetween;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  transition: opacity 0.3s ease;
+  border:
+    variables.$midBorder
+    variables.$black;
+
+  i {
+    margin-right: 10px;
+    background-color: variables.$black;
+  }
+}
+
+.searchContainer{
+  position: relative;
+  width: 90%;
+  margin: auto;
+
+  .results {
+    position: relative;
+    padding: 5px;
+    height: 300px;
+    overflow-y: scroll;
+
+    tr {
+      display: flex;
+      margin: 10px 0;
+      font-family: "Courier New", serif;
+      border-bottom:
+        variables.$midBorder
+        variables.$lightgrey;
+
+      td {
+        width: 20%;
+        display: block;
+        align-items: center;
+
+        &:nth-child(6){
+          display: flex;
+        }
+
+        input {
+          @include variables.input;
+          margin: 10px 0;
+          width: 90%;
+        }
+
+        .errorMessage{
+          font-size: variables.$fontSizeSecondary;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          width: 100px;
+          color: variables.$black;
+          font-size: variables.$fontSizeSecondary;
+
+          i {
+            width: 18px;
+            height: 18px;
+            background-color: variables.$black;
+          }
+        }
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        width: 40px;
+
+        i {
+          margin: 0 0 0 10px;
+          width: 18px;
+          height: 18px;
+          background-color: variables.$black;
+        }
+      }
+
+      .disableSVG {
+        background-color: variables.$lightgrey !important;
+      }
+    }
+  }
+}

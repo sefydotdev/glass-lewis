@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Raleway;
+  font-weight: normal;
+  src: url("assets/fonts/Raleway.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: Lastone;
+  font-weight: normal;
+  src: url("assets/fonts/Lastone.ttf");
+  font-display: swap;
+}
+
+/*# sourceMappingURL=styles.css.map */

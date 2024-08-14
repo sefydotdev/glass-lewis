@@ -1,0 +1,93 @@
+@use '../UI/styles/variables' as variables;
+@use '../UI/styles/icons';
+
+
+.accountContainer {
+  @include variables.flexAlignCenterBetween;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 500px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: variables.$primaryFont;
+  font-size: variables.$fontSizeLarge;
+
+  button {
+    @include variables.button;
+    margin-bottom: 9px;
+
+    &:hover {
+      @include variables.buttonHover;
+    }
+  }
+}
+
+.dashboardContainer {
+  @include variables.centerPositionAbsolute;
+  width: 900px;
+  height: 500px;
+  overflow-y: scroll;
+  font-family: variables.$primaryFont;
+  border:
+    variables.$thickBorder
+    variables.$black;
+  box-shadow:
+    variables.$thickBoxShadow
+    variables.$pinkAccent;
+
+  .controllers{
+    @include variables.flexAlignCenterBetween;
+    width: 100%;
+    border-bottom:
+      variables.$thickBorder
+      variables.$black;
+
+    button {
+      @include variables.button;
+      @include variables.flexAlignCenterBetween;
+      width: 20%;
+      box-shadow: none;
+      border-style: none;
+
+      &:hover {
+        @include variables.buttonHover;
+      }
+
+      i {
+        margin-right: 10px;
+        background-color: variables.$black;
+      }
+    }
+
+    .search {
+      @include variables.flexAlignCenterBetween;
+      width: 80%;
+      height: 100%;
+      padding: 0;
+
+      i {
+        margin: 0 10px;
+        background-color: variables.$black;
+      }
+
+      input {
+        height: 100%;
+        width: 100%;
+        border-style: none;
+        text-align: right;
+        padding: 7px 10px 7px 0;
+        color: variables.$black;
+        font-size: variables.$fontSizePrimary;
+        font-family: variables.$primaryFont;
+        border-right:
+          variables.$midBorder
+          variables.$black;
+
+        &::placeholder {
+          color: variables.$black;
+        }
+      }
+    }
+  }
+}

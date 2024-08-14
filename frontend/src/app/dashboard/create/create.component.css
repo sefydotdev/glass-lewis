@@ -1,0 +1,132 @@
+.icon-user {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/user.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-search {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/search.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-edit {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/edit.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-file {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/file.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-plus {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/plus.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-save {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/save.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-link {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/link.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-clear {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/clear.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.formTitle {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.createFormContainer {
+  padding: 20px 50px 50px 50px;
+  box-sizing: border-box;
+}
+.createFormContainer .inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+.createFormContainer .inputContainer:nth-child(3) .inputBox {
+  width: 100%;
+}
+.createFormContainer .inputContainer .inputBox {
+  margin: 10px;
+  width: 80%;
+}
+.createFormContainer .inputContainer .inputBox input {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  font-size: 14px;
+  font-family: Raleway, serif;
+  box-shadow: 2px 2px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.createFormContainer .inputContainer .inputBox .errorMessage {
+  position: absolute;
+  margin-top: -5px;
+  color: #d04d4d;
+  font-size: 12px;
+}
+.createFormContainer .addNewEntryButton {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: 2px solid #000000;
+  font-size: 14px;
+  font-family: Raleway, serif;
+  box-shadow: 2px 2px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.createFormContainer .addNewEntryButton:hover {
+  transition: 0.2s;
+  box-shadow: 1px 1px;
+}
+.createFormContainer .addNewEntryButton i {
+  margin-right: 10px;
+  background-color: #000000;
+}
+
+/*# sourceMappingURL=create.component.css.map */

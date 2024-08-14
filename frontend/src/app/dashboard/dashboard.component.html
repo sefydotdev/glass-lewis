@@ -1,0 +1,51 @@
+<div class="accountContainer">
+  <p>Good {{ getGreetings() }}</p>
+  <div class="logoutContainer">
+    <i class="icon-user"></i>
+    <button
+      type="button"
+      aria-label="View"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+  </div>
+</div>
+<div class="dashboardContainer">
+  <div class="controllers">
+    <div
+      class="search"
+      (click)="toggleView('search')"
+    >
+      <i
+        class="icon-search"
+        aria-hidden="true"
+      ></i>
+      <input
+        placeholder="Search by Name, ISIN or type all..."
+        #searchField
+        type="text"
+        (keydown.enter)="emitValueToSearch(searchField.value)"
+      >
+    </div>
+    <button
+      (click)="toggleView('create')"
+      type="button"
+      aria-label="View"
+    >
+      <i
+        class="icon-plus"
+        aria-hidden="true"
+      ></i>
+      Create
+    </button>
+  </div>
+  <app-search
+    *ngIf="currentView === 'search'"
+    [searchQuery]="searchValue"
+  ></app-search>
+
+  <app-create
+    *ngIf="currentView === 'create'"
+  ></app-create>
+</div>

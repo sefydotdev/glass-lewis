@@ -1,0 +1,165 @@
+.icon-user {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/user.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-search {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/search.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-edit {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/edit.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-file {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/file.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-plus {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/plus.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-save {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/save.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-link {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/link.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.icon-clear {
+  width: 20px;
+  height: 20px;
+  mask: url("../../../assets/icons/clear.svg");
+  display: inline-block;
+  mask-size: cover;
+}
+
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  width: 90%;
+  margin: 30px auto 0 auto;
+  box-sizing: border-box;
+  font-weight: bold;
+  border-bottom: 2px solid;
+  font-size: 14px;
+}
+.tableHeader span {
+  width: 20%;
+}
+
+.saveNotification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 20px;
+  transition: opacity 0.3s ease;
+  border: 2px solid #000000;
+}
+.saveNotification i {
+  margin-right: 10px;
+  background-color: #000000;
+}
+
+.searchContainer {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+.searchContainer .results {
+  position: relative;
+  padding: 5px;
+  height: 300px;
+  overflow-y: scroll;
+}
+.searchContainer .results tr {
+  display: flex;
+  margin: 10px 0;
+  font-family: "Courier New", serif;
+  border-bottom: 2px solid #e8e8e8;
+}
+.searchContainer .results tr td {
+  width: 20%;
+  display: block;
+  align-items: center;
+}
+.searchContainer .results tr td:nth-child(6) {
+  display: flex;
+}
+.searchContainer .results tr td input {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  font-size: 14px;
+  font-family: Raleway, serif;
+  box-shadow: 2px 2px;
+  margin: 10px 0;
+  width: 90%;
+}
+.searchContainer .results tr td .errorMessage {
+  font-size: 12px;
+}
+.searchContainer .results tr td a {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  color: #000000;
+  font-size: 12px;
+}
+.searchContainer .results tr td a i {
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+}
+.searchContainer .results tr button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 40px;
+}
+.searchContainer .results tr button i {
+  margin: 0 0 0 10px;
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+}
+.searchContainer .results tr .disableSVG {
+  background-color: #e8e8e8 !important;
+}
+
+/*# sourceMappingURL=search.component.css.map */

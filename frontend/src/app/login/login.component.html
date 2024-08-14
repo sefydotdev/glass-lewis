@@ -1,0 +1,21 @@
+<div class="loginContainer">
+  <div class="iconContainer">
+    <i class="icon-user"></i>
+  </div>
+  <div *ngFor="let _ of digits; let i = index">
+    <input
+      #inputField
+      (input)="handleInput($event, i)"
+      maxlength="1"
+      [ngClass]="wrongPasscode ? 'incorrect' : ''"
+      [attr.data-index]="i"
+    >
+  </div>
+</div>
+<img
+  class="graphic"
+  ngSrc="../../assets/img/graphicAssetOne.png"
+  height="543"
+  width="574"
+  alt="Graphics"
+/>

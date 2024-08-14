@@ -1,0 +1,61 @@
+@use '../../UI/styles/variables' as variables;
+@use '../../UI/styles/icons';
+
+
+.formTitle {
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.createFormContainer {
+  padding: 20px 50px 50px 50px;
+  box-sizing: border-box;
+
+  .inputContainer {
+    @include variables.flexAlignCenterBetween;
+    width: 60%;
+    margin: auto;
+
+    &:nth-child(3){
+      .inputBox {
+        width: 100%
+      }
+    }
+
+    .inputBox {
+      margin: 10px;
+      width: 80%;
+
+      input{
+        @include variables.input;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .errorMessage {
+        position: absolute;
+        margin-top: -5px;
+        color: variables.$errorRed;
+        font-size: variables.$fontSizeSecondary;
+      }
+    }
+  }
+
+  .addNewEntryButton {
+    @include variables.button;
+    @include variables.flexAlignCenterBetween;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    &:hover {
+      @include variables.buttonHover;
+    }
+
+    i {
+      margin-right: 10px;
+      background-color: variables.$black;
+    }
+  }
+}

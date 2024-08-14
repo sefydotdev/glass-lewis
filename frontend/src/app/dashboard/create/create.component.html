@@ -1,0 +1,101 @@
+<div class="formTitle">{{ formTitle }}</div>
+<form
+  [formGroup]="companyRecordForm"
+  (ngSubmit)="onSubmit()"
+  class="createFormContainer"
+>
+  <div class="inputContainer">
+    <div class="inputBox">
+      <input
+        id="name"
+        formControlName="name"
+        aria-required="true"
+        placeholder="Company Name"
+        [ngClass]="{'invalid': name?.invalid && name?.touched}"
+      />
+      <div
+        *ngIf="name?.invalid && name?.touched"
+        class="errorMessage"
+      >
+        {{ getErrorMessage(name, 'Company Name') }}
+      </div>
+    </div>
+
+    <div class="inputBox">
+      <input
+        id="exchange"
+        formControlName="exchange"
+        aria-required="true"
+        placeholder="Exchange"
+        [ngClass]="{'invalid': exchange?.invalid && exchange?.touched}"
+      />
+      <div
+        *ngIf="exchange?.invalid && exchange?.touched"
+        class="errorMessage"
+      >
+        {{ getErrorMessage(exchange, 'Exchange') }}
+      </div>
+    </div>
+  </div>
+
+  <div class="inputContainer">
+    <div class="inputBox">
+      <input
+        id="ticker"
+        formControlName="ticker"
+        aria-required="true"
+        placeholder="Ticker"
+        [ngClass]="{'invalid': ticker?.invalid && ticker?.touched}"
+      />
+      <div
+        *ngIf="ticker?.invalid && ticker?.touched"
+        class="errorMessage"
+      >
+        {{ getErrorMessage(ticker, 'Ticker') }}
+      </div>
+    </div>
+
+    <div class="inputBox">
+      <input
+        id="ISIN"
+        formControlName="ISIN"
+        aria-required="true"
+        placeholder="ISIN"
+        [ngClass]="{'invalid': ISIN?.invalid && ISIN?.touched}"
+      />
+      <div
+        *ngIf="ISIN?.invalid && ISIN?.touched"
+        class="errorMessage"
+      >
+        {{ getErrorMessage(ISIN, 'ISIN') }}
+      </div>
+    </div>
+  </div>
+
+  <div class="inputContainer">
+    <div class="inputBox">
+      <input
+        id="website"
+        formControlName="website"
+        placeholder="Website URL"
+        [ngClass]="{'invalid': website?.invalid && website?.touched}"
+      />
+      <div
+        *ngIf="website?.invalid && website?.touched"
+        class="errorMessage"
+      >
+        {{ getErrorMessage(website, 'Website URL') }}
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    aria-label="Save Changes"
+    class="addNewEntryButton"
+    [disabled]="companyRecordForm.invalid"
+  >
+    <i class="icon-save" aria-hidden="true"></i>
+    Save Changes
+  </button>
+</form>

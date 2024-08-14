@@ -1,0 +1,54 @@
+@use '../UI/styles/variables' as variables;
+@use '../UI/styles/icons';
+
+
+.loginContainer {
+  @include variables.centerPositionAbsolute;
+  @include variables.flexAlignCenterBetween;
+  text-align: center;
+  min-width: 700px;
+  max-width: 900px;
+
+  .iconContainer {
+    width: 60px;
+    height: 60px;
+
+    i {
+      width: 100%;
+      height: 100%;
+      margin-right: 10px;
+      background-color: variables.$black;
+    }
+  }
+
+  input {
+    margin: 10px;
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    font-size: variables.$fontSizeHuge;
+    border-radius: variables.$primaryBorderRadius;
+    border:
+      variables.$thickBorder
+      variables.$black;
+    box-shadow:
+      variables.$thickBoxShadow
+      variables.$black;
+
+    &:hover, &:focus{
+      @include variables.selected;
+    }
+  }
+}
+
+.incorrect {
+  box-shadow:
+    variables.$thickBoxShadow
+    variables.$errorRed !important;
+}
+
+.graphic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

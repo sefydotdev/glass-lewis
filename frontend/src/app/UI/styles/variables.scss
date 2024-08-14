@@ -1,0 +1,82 @@
+//-------------------------------------------------
+// Standardised CSS styles
+//-------------------------------------------------
+
+// Fonts
+$primaryFont: Raleway, serif;
+
+// Text Size
+$fontSizeHuge: 50px;
+$fontSizeLarge: 30px;
+$fontSizePrimary: 14px;
+$fontSizeSecondary: 12px;
+$fontSizeSmall: 10px;
+
+// Box Styles
+$thickBorder: 3px solid;
+$midBorder: 2px solid;
+$thinBorder: 1px solid;
+
+$primaryBorderRadius: 14px;
+$secondaryBorderRadius: 7px;
+
+$thickBoxShadow: 5px 5px;
+$thinBoxShadow: 2px 2px;
+$hoverBoxShadow: 1px 1px;
+$thinkUnderBoxShadow: 0 5px;
+
+// UI Colour Standard
+$black: #000000;
+$lightgrey: #e8e8e8;
+$errorRed: #d04d4d;
+$pinkAccent: #eccbff;
+
+
+
+// Alignments
+@mixin centerPositionAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flexAlignCenterBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Standard Input Settings
+@mixin selected {
+  box-shadow:
+    5px 5px $black,
+    -3px -3px $pinkAccent;
+}
+
+@mixin button {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  border: $midBorder $black;
+  font-size: $fontSizePrimary;
+  font-family: $primaryFont;
+  box-shadow: $thinBoxShadow;
+  transition: .5s;
+}
+
+@mixin buttonHover {
+  transition: .2s;
+  box-shadow: $hoverBoxShadow;
+}
+
+@mixin input {
+  background: transparent;
+  padding: 5px 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: $midBorder $black;
+  font-size: $fontSizePrimary;
+  font-family: $primaryFont;
+  box-shadow: $thinBoxShadow;
+}
